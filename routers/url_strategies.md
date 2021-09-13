@@ -26,7 +26,7 @@ void main() {
 
 ## 云端部署设置
 
-但这个方法有一个问题是，只允许`web/index.html`的`<base>`标签配置绝对路径而**不允许相对路径**。这会为云端环境部署时带来新的问题。
+但这个方法有一个问题是，只允许`web/index.html`的`<base>`标签配置绝对路径而**不允许相对路径**。这会为云端环境部署时带来新的问题。[Stack Overflow的问答](https://stackoverflow.com/questions/59870357/how-to-remove-hash-from-url-in-flutter-web/65709246#65709246)对此有进一步的解答。
 
 在云开发的静态网站部署中，由于一个环境提供一个存储桶，根目录是根目录，如果Flutter for Web应用没有在此环境的根目录下，则Flutter for Web应用无法正常运行。在本地时，只需要简单设置为`/`即可，而在云端则需要是`<folder_name>/`，这会不一致。
 
