@@ -1,15 +1,58 @@
-# 页面路由设置
+# 页面路由
 
-Web网站是以单页应用的形式上线的，要让它看起来像普通网页，可以用网址访问到具体资源，修改路由必不可少。
+使用官方推荐的[`go_router`](https://gorouter.dev)库。
 
-## 选型
+## 定义路由
 
-[`fluro`](https://pub.dev/packages/fluro)：从文档上看支持类似于`/users/:id`的特性，可以满足RESTful的URLPattern的基本要求。fluro更简单，且已经能够满足需求。
+根据`go_router`文档对[声明式路由](https://gorouter.dev/declarative-routing)的说明配置，如：
 
-其他备选：
+```dart
+import 'package:go_router/go_router.dart';
 
-- [`auto_route`](https://pub.dev/packages/auto_route)：看起来更加复杂，搞不清可以搞成什么样。看[源码的example](https://github.com/Milad-Akarie/auto_route_library/blob/master/auto_route/example/lib/web/router/web_router.dart)可以搞同样的特性。
+/// 页面路由
+final GoRouter router = GoRouter(
+  routes: <GoRoute>[
+    // 首页
+    GoRoute(
+      path: '/',
+      builder: (BuildContext context, GoRouterState state) {
+        return HomeScreen();
+      },
+    ),
+    // 其他页面
+    ...
+  ]
+)
+```
 
-小结：
+## 配置入口类
 
-- 目前在社区找到的方案，都不是标准RESTful实现，不过比较方便可以支持定制成RESTful。
+在[入口文件`lib/main.dart`](app/main.md)导入路由类
+
+```dart
+import 'router.dart';
+```
+
+配置[入口类](app/main.md)
+
+```dart
+MaterialApp.router(
+    ...
+    /// 路由
+    routeInformationProvider: router.routeInformationProvider,
+    routeInformationParser: router.routeInformationParser,
+    routerDelegate: router.routerDelegate,
+    ...
+)
+```
+
+## 切换为History模式
+
+```dart
+
+```
+
+## 其他社区库
+
+- [`fluro`](https://pub.dev/packages/fluro)
+- [`auto_route`](https://pub.dev/packages/auto_route)

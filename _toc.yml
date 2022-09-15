@@ -1,0 +1,10 @@
+format: jb-book
+chapters:
+  - file: app/README.md
+    sections:
+      - file: app/init.md
+      - file: app/main.md
+      - file: app/routers.md
+  - file: widgets/README.md
+    sections: 
+      - file: widgets/navigations.md
