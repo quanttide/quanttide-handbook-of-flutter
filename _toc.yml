@@ -1,10 +1,11 @@
 format: jb-book
 chapters:
-  - file: app/README.md
+  - file: project_structure/README.md
     sections:
-      - file: app/init.md
-      - file: app/main.md
-      - file: app/routers.md
+      - file: project_structure/modules.md
+      - file: project_structure/main.md
+      - file: project_structure/theme.md
+      - file: project_structure/routers.md
   - file: widgets/README.md
     sections: 
       - file: widgets/navigations.md
