@@ -1,4 +1,5 @@
 format: jb-book
+root: README.md
 chapters:
   - file: project_structure/README.md
     sections:
