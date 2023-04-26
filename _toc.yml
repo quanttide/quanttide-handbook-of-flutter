@@ -3,10 +3,9 @@ root: README.md
 chapters:
   - file: project_structure/README.md
     sections:
-      - file: project_structure/modules.md
       - file: project_structure/main.md
       - file: project_structure/theme.md
-      - file: project_structure/routers.md
+      - file: project_structure/router.md
   - file: widgets/README.md
     sections: 
       - file: widgets/navigations.md
