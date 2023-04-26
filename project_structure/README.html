@@ -64,7 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'project_structure/README';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="模块划分" href="modules.html" />
+    <link rel="next" title="入口文件" href="main.html" />
     <link rel="prev" title="量潮Flutter手册" href="../README.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -152,10 +152,9 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">项目结构</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="modules.html">模块划分</a></li>
 <li class="toctree-l2"><a class="reference internal" href="main.html">入口文件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="theme.html">主题</a></li>
-<li class="toctree-l2"><a class="reference internal" href="routers.html">页面路由</a></li>
+<li class="toctree-l2"><a class="reference internal" href="router.html">页面路由</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../widgets/README.html">组件</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -309,6 +308,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">创建项目</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">模块划分</a></li>
 </ul>
             </nav>
         </div>
@@ -329,6 +329,19 @@ document.write(`
 </pre></div>
 </div>
 <p><a class="reference external" href="https://www.youtube.com/watch?v=qjA0JFiPMnQ"><code class="docutils literal notranslate"><span class="pre">mason</span></code></a>提供了一套更方便开发者复用代码风格的工具，推荐使用。</p>
+</section>
+<section id="id3">
+<h2>模块划分<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">main.dart</span></code>: 入口模块</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">theme.dart</span></code>: 主题</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">router.dart</span></code>: 页面路由</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">api.dart</span></code>: API</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">models/</span></code>: 数据模型</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">screens/</span></code>: 页面</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">widgets/</span></code>: 组件</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">utils/</span></code>: 工具</p></li>
+</ul>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -375,11 +388,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="modules.html"
+       href="main.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">模块划分</p>
+        <p class="prev-next-title">入口文件</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -402,6 +415,7 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">创建项目</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">模块划分</a></li>
 </ul>
   </nav></div>
 
