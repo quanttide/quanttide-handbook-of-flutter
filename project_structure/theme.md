@@ -1,8 +1,8 @@
-# 主题
+# 主题文件
+
+`lib/theme.dart`
 
 ```dart
-/// 主题
-
 import 'package:flutter/material.dart';
 
 

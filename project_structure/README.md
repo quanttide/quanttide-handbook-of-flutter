@@ -12,6 +12,8 @@ flutter create <your-dir>
 
 ## 模块划分
 
+`lib/`文件夹：
+
 - `main.dart`: 入口模块
 - `theme.dart`: 主题
 - `router.dart`: 页面路由

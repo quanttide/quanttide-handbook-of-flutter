@@ -1,6 +1,14 @@
 # 页面路由
 
+`lib/router.dart`文件。
+
 使用官方推荐的[`go_router`](https://gorouter.dev)库。
+
+使用前先添加库：
+
+```shell
+flutter pub add go_router
+```
 
 ## 定义路由
 
