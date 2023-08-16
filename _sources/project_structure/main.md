@@ -1,5 +1,7 @@
 # 入口文件
 
+`lib/main.dart`文件。
+
 ```dart
 import 'package:flutter/material.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';

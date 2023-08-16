@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="组件" href="../widgets/README.html" />
-    <link rel="prev" title="主题" href="theme.html" />
+    <link rel="prev" title="主题文件" href="theme.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -152,8 +152,9 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="README.html">项目结构</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="config.html">项目配置文件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="main.html">入口文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="theme.html">主题</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theme.html">主题文件</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">页面路由</a></li>
 </ul>
 </li>
@@ -324,7 +325,12 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>页面路由<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">lib/router.dart</span></code>文件。</p>
 <p>使用官方推荐的<a class="reference external" href="https://gorouter.dev"><code class="docutils literal notranslate"><span class="pre">go_router</span></code></a>库。</p>
+<p>使用前先添加库：</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>flutter<span class="w"> </span>pub<span class="w"> </span>add<span class="w"> </span>go_router
+</pre></div>
+</div>
 <section id="id2">
 <h2>定义路由<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
 <p>根据<code class="docutils literal notranslate"><span class="pre">go_router</span></code>文档对<a class="reference external" href="https://gorouter.dev/declarative-routing">声明式路由</a>的说明配置，如：</p>
@@ -479,7 +485,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">主题</p>
+        <p class="prev-next-title">主题文件</p>
       </div>
     </a>
     <a class="right-next"
