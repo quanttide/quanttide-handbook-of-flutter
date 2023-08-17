@@ -10,3 +10,6 @@ chapters:
   - file: widgets/README.md
     sections: 
       - file: widgets/navigations.md
+  - file: naming/README.md
+    sections:
+      - file: naming/widgets.md
