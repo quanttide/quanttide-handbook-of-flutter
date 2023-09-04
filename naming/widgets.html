@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>主题文件 &#8212; 量潮Flutter手册</title>
+    <title>组件命名 &#8212; 量潮Flutter手册</title>
   
   
   
@@ -61,11 +61,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'project_structure/theme';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'naming/widgets';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="页面路由" href="router.html" />
-    <link rel="prev" title="入口文件" href="main.html" />
+    <link rel="prev" title="命名" href="README.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -151,11 +150,11 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="README.html">项目结构</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="config.html">项目配置文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="main.html">入口文件</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">主题文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="router.html">页面路由</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../project_structure/README.html">项目结构</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../project_structure/config.html">项目配置文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_structure/main.html">入口文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_structure/theme.html">主题文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_structure/router.html">页面路由</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../models/README.html">数据模型</a></li>
@@ -163,8 +162,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../widgets/navigations.html">导航栏组件</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../naming/README.html">命名</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../naming/widgets.html">组件命名</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="README.html">命名</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">组件命名</a></li>
 </ul>
 </li>
 </ul>
@@ -221,7 +220,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/project_structure/theme.md" target="_blank"
+      <li><a href="../_sources/naming/widgets.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -290,7 +289,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -301,11 +302,20 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>主题文件</h1>
+    <h1>组件命名</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">一般原则</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mvcmvvm">MVC和MVVM组件</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -316,22 +326,21 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>主题文件<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">lib/theme.dart</span></code></p>
-<div class="highlight-dart notranslate"><div class="highlight"><pre><span></span><span class="k">import</span><span class="w"> </span><span class="s1">&#39;package:flutter/material.dart&#39;</span><span class="p">;</span>
-
-
-<span class="c1">/// 默认主题</span>
-<span class="kd">final</span><span class="w"> </span><span class="n">ThemeData</span><span class="w"> </span><span class="n">defaultThemeData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ThemeData</span><span class="p">(</span>
-<span class="w">  </span><span class="c1">/// 主题色</span>
-<span class="w">  </span><span class="nl">primarySwatch:</span><span class="w"> </span><span class="n">Colors</span><span class="p">.</span><span class="n">blue</span><span class="p">,</span>
-<span class="w">  </span><span class="c1">/// 默认字体</span>
-<span class="w">  </span><span class="nl">fontFamily:</span><span class="w"> </span><span class="s1">&#39;Roboto&#39;</span><span class="p">,</span>
-<span class="w">  </span><span class="c1">/// Material 3开关</span>
-<span class="w">  </span><span class="c1">// useMaterial3: true,</span>
-<span class="p">);</span>
-</pre></div>
-</div>
+<h1>组件命名<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<section id="id2">
+<h2>一般原则<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<p>使用具体的名词，能够清晰地描述所代表的单个实体。例如，”User”表示用户，”Product”表示产品。使用单数形式，以表示单个实例。这有助于保持命名的一致性。例如，”User”而不是”Users”。</p>
+</section>
+<section id="mvcmvvm">
+<h2>MVC和MVVM组件<a class="headerlink" href="#mvcmvvm" title="Permalink to this heading">#</a></h2>
+<p>为了避免数据模型、视图组件、控制器组件、视图模型组件之间的命名冲突，规定：</p>
+<ul class="simple">
+<li><p>不加后缀或者使用”Model”后缀表示数据模型；</p></li>
+<li><p>使用”View”后缀表示视图组件；</p></li>
+<li><p>使用”Controller”后缀表示控制器组件；</p></li>
+<li><p>使用”Provider”后缀表示Provider库实现的视图模型组件。</p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -347,7 +356,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./project_structure"
+            path: "./naming"
         },
         predefinedOutput: true
     }
@@ -366,22 +375,13 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="main.html"
+       href="README.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">入口文件</p>
+        <p class="prev-next-title">命名</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="router.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">页面路由</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div></div>
   
@@ -392,6 +392,21 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">一般原则</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mvcmvvm">MVC和MVVM组件</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
