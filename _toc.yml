@@ -7,6 +7,7 @@ chapters:
       - file: project_structure/main.md
       - file: project_structure/theme.md
       - file: project_structure/router.md
+  - file: models/README.md
   - file: widgets/README.md
     sections: 
       - file: widgets/navigations.md
